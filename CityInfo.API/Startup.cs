@@ -51,8 +51,6 @@ namespace CityInfo.API
             services.AddDbContext<CityInfoContext>(option =>
             {
                 option.UseSqlServer(connectionString);
-
-                //services.AddScoped<ICityInfoRepository, CityInfoRepository>();
             });
 
 
