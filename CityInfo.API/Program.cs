@@ -43,7 +43,7 @@ namespace CityInfo.API
                     }
                     catch(Exception ex)
                     {
-                        logger.Error(ex, "An error occurred while migrating the database");
+                        logger.Error(ex, "An error occurred while migrating the database  And I have now logged it.");
                     }
                 }
                     // run the app

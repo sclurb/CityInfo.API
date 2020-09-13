@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using CityInfo.API.Contexts;
 using CityInfo.API.Services;
 using Microsoft.AspNetCore.Builder;
@@ -51,11 +52,10 @@ namespace CityInfo.API
             services.AddDbContext<CityInfoContext>(option =>
             {
                 option.UseSqlServer(connectionString);
-
-                //services.AddScoped<ICityInfoRepository, CityInfoRepository>();
             });
 
-
+            services.AddScoped<ICityInfoRepository, CityInfoRepository>();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
